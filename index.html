@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Felicity Home</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+
+
+        <style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+   .service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.service-icon {
+    width: 100%; /* Makes the icon container take the full width of the service item */
+    height: auto; /* Allows for flexible height */
+    margin-bottom: 20px; /* Space between icon and content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image doesn't overflow its container */
+}
+
+.service-icon img,
+.service-icon i {
+    width: 100%; /* Makes the image take up the full width of its container */
+    height: 100%; /* Makes the image take up the full height of its container */
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+    display: block; /* Removes any extra space below the image */
+}
+
+.service-content {
+    flex-grow: 1;
+    text-align: center; /* Centers text */
+}
+
+.btn {
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+}
+.footer-section {
+    height: 300px; /* Adjust height as needed */
+    padding: 20px;
+    background-color: #f8f9fa; /* Example background color */
+}
+.footer-map {
+    width: 100%;
+    height: 245px; /* Ensures it fills the footer height */
+    display: flex;
+    justify-content: center; /* Centers the map */
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%; /* Ensures the iframe fills its parent */
+    border: 0; /* Removes border */
+}
+
+.footer-forcecentre {
+    text-align: center; /* Center text */
+    width: 100%; /* Ensure the div takes full width */
+    padding: 20px 0; /* Optional: Add padding for spacing */
+    background-color: #0f212e; /* Optional: Set background color for visibility */
+}
+
+
+             #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: width 0.3s, height 0.3s; /* Smooth transition */
+        }
+
+        #whatsapp-button img {
+            width: 40px;
+            height: 40px;
+        }
+
+        #whatsapp-button:hover {
+            width: 180px; /* Expanded width */
+            height: 60px; /* Keep height the same */
+            border-radius: 30px; /* Rounded corners */
+        }
+
+        #whatsapp-button:hover span {
+            display: block; /* Show text on hover */
+        }
+
+        #whatsapp-text {
+            display: none; /* Hide text by default */
+            color: white;
+            margin-left: 10px; /* Space between icon and text */
+            font-size: 14px; /* Adjust font size */
+        }
+
+</style>
+
+
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid header position-relative overflow-hidden p-0">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+
+                    <h1 class=""><i><img src="img/felicity-logo.png" alt=""></i>Felicity Global  Holdings </h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">-->
+<!--                    <span class="fa fa-bars"></span>-->
+<!--                </button>-->
+<!--                <div class="collapse navbar-collapse" id="navbarCollapse">-->
+<!--                    <div class="navbar-nav ms-auto py-0">-->
+<!--                        <a href="index.html" class="nav-item nav-link active">Home</a>-->
+<!--                        <a href="about.html" class="nav-item nav-link">About</a>-->
+<!--                        <a href="service.html" class="nav-item nav-link">Services</a>-->
+<!--&lt;!&ndash;                        <div class="nav-item dropdown">&ndash;&gt;-->
+<!--                            <a href=portfolio.html class="nav-item nav-link">Portfolio</a>-->
+<!--&lt;!&ndash;                            <div class="dropdown-menu m-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="feature.html" class="dropdown-item">Features</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="portfolio.html" class="dropdown-item">Pricing</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="blog.html" class="dropdown-item">Blog</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="404.html" class="dropdown-item">404 Page</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>-->
+<!--                    </div>-->
+<!--&lt;!&ndash;                    <a href="#" class="btn btn-light border border-primary rounded-pill text-primary py-2 px-4 me-4">Log In</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">Sign Up</a>&ndash;&gt;-->
+<!--                </div>-->
+            </nav>
+
+
+            <!-- Hero Header Start -->
+            <div class="hero-header overflow-hidden px-5">
+                <div class="rotate-img">
+                    <img src="img/sty-1.png" class="img-fluid w-100" alt="">
+                    <div class="rotate-sty-2"></div>
+                </div>
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                        <h1 class="display-4 text-dark mb-4 wow fadeInUp" data-wow-delay="0.3s">Redefining Marketing and Communication Excellence</h1>
+                        <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">Drive unparalleled sales
+growth, enhance brand visibility, and propel your
+organization towards lasting success.</p>
+                        <a href="#" class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.7s">Get Started</a>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <img src="img/hero-img-1.png" class="img-fluid w-100 h-100" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Header End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid overflow-hidden py-5"  style="margin-top: 6rem;">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="RotateMoveLeft">
+                            <img src="img/felicity-logo.png" class="img-fluid w-100" alt="" height="50%">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h4 class="mb-1 text-primary">About Us</h4>
+                        <h1 class="display-5 mb-4">Felicity Global Holdings Limited</h1>
+                        <p class="mb-4">An exceptional integrated marketing communications agency, committed to elevating brands above their competitors through cutting-edge marketing and PR services.
+                        <p>
+                        <a href="#" class="btn btn-primary rounded-pill py-3 px-5">About More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                    <h4 class="mb-1 text-primary">Our Service</h4>
+                    <h1 class="display-5 mb-4">What We Can Do For You</h1>
+                    <p class="mb-0">We offer an
+extensive range of high quality  services that cater to diverse clientele, including start-ups, blue-chip corporations, and governmental entities. Our comprehensive suite of services includes:
+                    </p>
+                </div>
+                <div class="row g-4 justify-content-center">
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <i class="fas fa-mail-bulk fa-5x text-secondary"></i>
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Expert Communications</h4>
+                <p class="mb-4">
+                    Social and Behavioural Change Communications, Policy Communications, Corporate Communications
+                </p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/PA.png" alt="Government Relations and Public Affairs">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Government Relations and Public Affairs</h4>
+                <p class="mb-4">Policy influence and organization-government interactions. Public Relations: Media and stakeholder engagement.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/media monitoring.jpeg" alt="Digital Marketing">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Digital Marketing</h4>
+                <p class="mb-4">Brand narratives, website design, SEO, social media, and influencer marketing.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/market intelligence new.png" alt="Market Research and Intelligence">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Market Research and Intelligence</h4>
+                <p class="mb-4">Harnessing data-driven insights to develop impactful marketing strategies and measure performance.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/art+content.jpeg" alt="Art and Content Creation">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Art and Content Creation</h4>
+                <p class="mb-4">Graphic design, animations, UI/UX design, and custom web development.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/multimedia.jpeg" alt="Multimedia Services">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Multimedia Services</h4>
+                <p class="mb-4">Videography, photography, and post-production to enhance brand storytelling.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/media monitoring beta.png" alt="Media Monitoring">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Media Monitoring</h4>
+                <p class="mb-4">We use expert analysis and advanced technology to track media coverage and provide insights for informed decision-making.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+        <div class="service-item text-center rounded p-4">
+            <div class="service-icon bg-light rounded p-4 mb-4">
+                <img src="img/Training.png" alt="Professional Training">
+            </div>
+            <div class="service-content">
+                <h4 class="mb-4">Professional Training</h4>
+                <p class="mb-4">Providing media training and etiquette coaching to enhance communication skills and professional growth.</p>
+                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature overflow-hidden py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                    <h1 class="text-primary">Why Us?</h1>
+
+                    <p class=" mb-4"">At Felicity Global Holdings Limited, we are committed to providing our clients with the highest level of service and quality. Here are some reasons why you should choose us </p>
+                </div>
+                <div class="row g-4 justify-content-center text-center mb-5">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="text-center p-4">
+                            <div class="feature-content">
+                                <a href="#" class="h1">Experience</a>
+                                <p class="mt-4 mb-0">Our team has years of experience in PR,Communications Management and has worked on diverse clienteles.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="text-center p-4">
+                            <div class="feature-content">
+                                <a href="#" class="h1">Creativity</a>
+                                <p class="mt-4 mb-0">We pride ourselves on our ability to create unique and memorable campaigns that stand out from the crowd.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="text-center rounded p-4">
+                            <div class="feature-content">
+                                <a href="#" class="h1">Attention to Detail </a>
+                                <p class="mt-4 mb-0"> We pay close attention to every detail, ensuring that every aspect of your campaign is flawless.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="text-center rounded p-4">
+                            <div class="feature-content">
+                                <a href="#" class="h1">Customer Service</a>
+                                <p class="mt-4 mb-0">We are committed to providing our clients with exceptional customer service and communication throughout.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+ <h2 class="text-primary" style="text-align: center;">Be A Part of Our Success Story.</h2>
+
+<div class="logos" style="overflow: hidden; padding: 60px 0; background: white; white-space: nowrap; position: relative;">
+  <div class="logos-slide" style="display: inline-block; animation: 35s slide infinite linear;">
+    <img src="img/moh_new-removebg-preview.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/drmh.jpeg" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/e-zisha.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/lg.jpg" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/mck new.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/wildlife.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/zuru.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/ciala.png" style="height: 50px; margin: 0 40px;" />
+  </div>
+
+  <div class="logos-slide" style="display: inline-block; animation: 35s slide infinite linear;">
+     <img src="img/moh_new-removebg-preview.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/drmh.jpeg" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/e-zisha.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/lg.jpg" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/mck new.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/wildlife.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/zuru.png" style="height: 50px; margin: 0 40px;" />
+    <img src="img/partners/ciala.png" style="height: 50px; margin: 0 40px;" />
+  </div>
+</div>
+
+
+
+
+        <div class="footer-section">
+        <div class="row justify-content-between align-items-center">
+            <!-- Contact Info on the Left -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column text-start">
+                    <h4 class="mb-4 text-dark">Contact Info</h4><ln></ln>
+                    <a href=""><i class="fa fa-map-marker-alt me-2"></i> Woodlands road </a><ln></ln>
+                    <a href=""><i class="fas fa-envelope me-2"></i> info@felicityltd.com</a><ln></ln>
+                    <a href=""><i class="fas fa-phone me-2"></i> +254721745530</a>
+
+                    <div class="d-flex align-items-center">
+<!--                        <i class="fas fa-share fa-2x text-secondary me-2"></i>-->
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map on the Right -->
+            <div class="col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end">
+                <div class="footer-map">
+                    <!-- Add your map iframe here -->
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d508.19145514710516!2d36.79799754124984!3d-1.2880378015815277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10b9e4bb51a1%3A0x91a170a138383f12!2sWoodlands%20Office%20Park!5e0!3m2!1sen!2ske!4v1729018879198!5m2!1sen!2ske"
+                        class="map-iframe"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</div>
+
+        
+        <!-- Copyright Start -->
+       <div class="footer-forcecentre text-center">
+    <span class="text-white">
+        <p>Felicity Global Holdings LTD, All rights reserved. <i class="fas fa-copyright text-light me-2"></i></p>
+    </span>
+</div>
+
+        <!-- Copyright End -->
+
+
+        <!--Whatsapp button start  -->
+
+            <div id="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-image">
+        <span id="whatsapp-text">Chat with us !</span> <!-- Text element -->
+    </div>
+
+    <script>
+        // Add click event listener to the WhatsApp button
+        const whatsappButton = document.getElementById('whatsapp-button');
+
+        whatsappButton.addEventListener('click', function() {
+            // Open WhatsApp link
+            window.open('https://wa.me/254721745530', '_blank');
+        });
+    </script>
+
+<!--Whatsapp button end  -->
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
